@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AOSK Tumaini Centre | Executive Accommodation & Conferencing in Nairobi, Kenya</title>
+<meta name="description" content="AOSK Tumaini Centre — a serene retreat for executive accommodation, professional conferencing, and ICT training in the heart of Kilimani, Nairobi. Managed by the Association of Sisterhoods of Kenya since 1962.">
+<meta name="keywords" content="Tumaini Centre Nairobi, executive accommodation Kilimani, conference rooms Nairobi, ICT training Kenya, AOSK, retreat centre Nairobi, meeting rooms Adams Arcade">
+<link rel="canonical" href="https://tumaini.aoskenya.org/">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --blue: #1B4F8A;
+  --blue-dark: #143d6e;
+  --blue-light: #e8f0fb;
+  --white: #FFFFFF;
+  --cool-white: #F8FAFC;
+  --alabaster: #FAF8F5;
+  --slate: #0F172A;
+  --slate-mid: #334155;
+  --slate-light: #64748B;
+  --border: 1px solid #CBD5E1;
+  --border-blue: 1px solid var(--blue);
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'Inter', system-ui, sans-serif;
+  --header-h: 68px;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: var(--sans); color: var(--slate); background: var(--white); line-height: 1.6; font-size: 15px; }
+
+/* ═══ HEADER ════════════════════════════════════════════════════════ */
+#site-header {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 1000; background: var(--white);
+  border-bottom: var(--border);
+}
+
+.header-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 40px; height: var(--header-h);
+}
+
+.logo-wrap {
+  display: flex; align-items: center; gap: 12px;
+  text-decoration: none; color: var(--slate); flex-shrink: 0;
+}
+.logo-mark {
+  width: 40px; height: 40px; background: var(--blue);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.logo-mark svg { width: 22px; height: 22px; }
+.logo-text { display: flex; flex-direction: column; line-height: 1.15; }
+.logo-text .line1 {
+  font-family: var(--serif); font-size: 13px; font-weight: 700;
+  letter-spacing: 0.07em; text-transform: uppercase; color: var(--blue);
+}
+.logo-text .line2 {
+  font-size: 9px; letter-spacing: 0.13em; text-transform: uppercase;
+  color: var(--slate-light); font-weight: 500;
+}
+
+/* ── Desktop Nav ──────────────────────────────────────────────────── */
+#desktop-nav {
+  display: flex; align-items: stretch; height: var(--header-h);
+}
+
+.dnav-item {
+  position: relative; display: flex; align-items: center;
+}
+
+.dnav-link {
+  display: flex; align-items: center; gap: 5px;
+  padding: 0 18px; height: 100%;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.09em;
+  text-transform: uppercase; color: var(--slate-mid);
+  text-decoration: none; cursor: pointer;
+  border-left: var(--border);
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+}
+
+.dnav-link:hover, .dnav-item:hover .dnav-link { color: var(--blue); background: var(--cool-white); }
+
+.dnav-arrow {
+  font-size: 8px; color: var(--slate-light);
+  transition: transform 0.2s;
+}
+
+.dnav-item:hover .dnav-arrow { transform: rotate(180deg); }
+
+/* Dropdown panel */
+.dnav-dropdown {
+  position: absolute; top: 100%; left: 0;
+  background: var(--white);
+  border: var(--border); border-top: 2px solid var(--blue);
+  min-width: 220px; z-index: 200;
+  opacity: 0; pointer-events: none;
+  transform: translateY(-6px);
+  transition: opacity 0.18s, transform 0.18s;
+}
+
+.dnav-item:hover .dnav-dropdown {
+  opacity: 1; pointer-events: all; transform: translateY(0);
+}
+
+.dnav-dropdown-page {
+  display: block; padding: 12px 20px;
+  font-size: 13px; font-weight: 600;
+  color: var(--slate); text-decoration: none;
+  border-bottom: var(--border);
+  transition: background 0.12s, color 0.12s;
+}
+
+.dnav-dropdown-page:hover { background: var(--blue); color: white; }
+
+.dnav-dropdown-divider {
+  font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--slate-light); padding: 10px 20px 4px;
+  border-bottom: var(--border);
+}
+
+.dnav-sub-link {
+  display: block; padding: 9px 20px 9px 30px;
+  font-size: 12px; color: var(--slate-mid);
+  text-decoration: none; border-bottom: var(--border);
+  transition: color 0.12s, background 0.12s;
+}
+.dnav-sub-link:last-child { border-bottom: none; }
+.dnav-sub-link:hover { color: var(--blue); background: var(--cool-white); }
+
+/* ── Mobile Hamburger ─────────────────────────────────────────────── */
+#menu-btn {
+  display: none; align-items: center; gap: 8px;
+  background: none; border: var(--border-blue);
+  padding: 8px 14px; cursor: pointer;
+  font-family: var(--sans); font-size: 11px; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--blue); transition: background 0.15s, color 0.15s;
+}
+#menu-btn:hover { background: var(--blue); color: white; }
+#menu-btn:hover .bar { background: white; }
+.hamburger { display: flex; flex-direction: column; gap: 4px; }
+.bar { width: 18px; height: 1.5px; background: var(--blue); transition: background 0.15s; }
+
+/* Mobile Drawer */
+#nav-drawer {
+  display: none; background: var(--white);
+  border-bottom: 2px solid var(--blue);
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+#nav-drawer.open { max-height: 700px; }
+
+.mob-nav-item { border-bottom: var(--border); }
+.mob-nav-header {
+  display: flex; align-items: center; gap: 10px;
+  padding: 14px 20px; cursor: pointer;
+  transition: background 0.12s; user-select: none;
+}
+.mob-nav-header:hover { background: var(--cool-white); }
+.mob-nav-arrow {
+  font-size: 10px; color: var(--blue); width: 14px;
+  display: inline-block; transition: transform 0.2s;
+}
+.mob-nav-item.open .mob-nav-arrow { transform: rotate(90deg); }
+.mob-nav-title {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--slate); flex: 1;
+}
+.mob-nav-sub {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.25s ease;
+  background: var(--cool-white); border-top: var(--border);
+}
+.mob-nav-item.open .mob-nav-sub { max-height: 200px; }
+.mob-nav-page-link {
+  display: block; padding: 11px 20px 11px 20px;
+  font-size: 12px; font-weight: 600; color: var(--slate);
+  text-decoration: none; border-bottom: var(--border);
+  transition: color 0.12s;
+}
+.mob-nav-page-link:hover { color: var(--blue); background: var(--blue-light); }
+.mob-sub-links { padding: 0 0 4px 0; }
+.mob-sub-link {
+  display: block; padding: 9px 20px 9px 36px;
+  font-size: 12px; color: var(--slate-mid);
+  text-decoration: none; border-bottom: var(--border);
+  transition: color 0.12s;
+}
+.mob-sub-link:last-child { border-bottom: none; }
+.mob-sub-link:hover { color: var(--blue); }
+
+/* ═══ MAIN ════════════════════════════════════════════════════════════ */
+main { padding-top: var(--header-h); }
+.page { display: none; }
+.page.active { display: block; }
+
+/* ═══ TYPOGRAPHY & SECTIONS ════════════════════════════════════════════ */
+.section { padding: 80px 64px; border-bottom: var(--border); }
+.section:last-child { border-bottom: none; }
+
+.section-eyebrow {
+  font-size: 10px; font-weight: 600;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--blue); margin-bottom: 12px;
+}
+
+h1.display {
+  font-family: var(--serif);
+  font-size: clamp(34px, 4.5vw, 58px);
+  font-weight: 700; line-height: 1.1; color: var(--slate); margin-bottom: 20px;
+}
+h2.section-title {
+  font-family: var(--serif);
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 600; line-height: 1.2; color: var(--slate); margin-bottom: 16px;
+}
+h3.card-title {
+  font-family: var(--serif); font-size: 19px;
+  font-weight: 600; margin-bottom: 10px; color: var(--slate);
+}
+p.body-text {
+  font-size: 15px; line-height: 1.8; color: var(--slate-mid); max-width: 680px;
+}
+.lead-text {
+  font-size: 18px; line-height: 1.7; color: var(--slate-mid); max-width: 700px;
+  font-weight: 300; margin-bottom: 32px;
+}
+
+/* ═══ HERO ═════════════════════════════════════════════════════════════ */
+.hero-section {
+  display: flex; align-items: stretch;
+  min-height: 600px; border-bottom: var(--border);
+}
+.hero-image-col {
+  flex: 1; position: relative; overflow: hidden; min-height: 400px;
+}
+.hero-image-col img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(11,30,60,0.72) 0%, rgba(27,79,138,0.55) 100%);
+}
+.hero-caption {
+  position: absolute; bottom: 28px; left: 28px;
+  font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+}
+.hero-content-col {
+  width: 480px; flex-shrink: 0; padding: 72px 56px;
+  display: flex; flex-direction: column; justify-content: center;
+  border-left: var(--border); background: var(--white);
+}
+.hero-subtitle {
+  font-size: 14px; line-height: 1.75; color: var(--slate-mid);
+  margin-bottom: 36px; max-width: 360px;
+}
+.btn-group { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.btn {
+  display: inline-block; padding: 13px 24px;
+  font-family: var(--sans); font-size: 11px; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  text-decoration: none; cursor: pointer; border: none;
+  transition: background 0.15s, color 0.15s;
+}
+.btn-primary { background: var(--blue); color: white; }
+.btn-primary:hover { background: var(--blue-dark); }
+.btn-outline { background: transparent; color: var(--blue); border: var(--border-blue); }
+.btn-outline:hover { background: var(--blue); color: white; }
+
+/* ═══ STAT ROW ═══════════════════════════════════════════════════════ */
+.stat-row {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  border-bottom: var(--border);
+}
+.stat-cell {
+  padding: 32px 36px; border-right: var(--border);
+  display: flex; flex-direction: column; gap: 4px;
+}
+.stat-cell:last-child { border-right: none; }
+.stat-num {
+  font-family: var(--serif); font-size: 38px;
+  font-weight: 700; color: var(--blue); line-height: 1;
+}
+.stat-label {
+  font-size: 11px; color: var(--slate-light);
+  letter-spacing: 0.06em; text-transform: uppercase; font-weight: 500;
+}
+
+/* ═══ THREE-COL ══════════════════════════════════════════════════════ */
+.three-col { display: grid; grid-template-columns: repeat(3, 1fr); border: var(--border); }
+.three-col .col { padding: 36px 32px; border-right: var(--border); }
+.three-col .col:last-child { border-right: none; }
+.col-icon {
+  width: 36px; height: 36px; border: var(--border-blue);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 18px; color: var(--blue); font-size: 15px;
+}
+
+/* ═══ IMAGE SECTION ══════════════════════════════════════════════════ */
+.img-text-row {
+  display: grid; grid-template-columns: 1fr 1fr;
+  border-bottom: var(--border);
+}
+.img-text-row.reverse { direction: rtl; }
+.img-text-row.reverse > * { direction: ltr; }
+.img-col { position: relative; min-height: 380px; overflow: hidden; }
+.img-col img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.img-col .img-overlay {
+  position: absolute; inset: 0;
+  background: rgba(15,23,42,0.25);
+}
+.text-col { padding: 60px 56px; display: flex; flex-direction: column; justify-content: center; }
+
+/* ═══ CONTACT BAR ════════════════════════════════════════════════════ */
+.contact-bar {
+  padding: 36px 64px; background: var(--slate);
+  display: flex; align-items: center; justify-content: space-between;
+  border-bottom: 2px solid var(--blue);
+}
+.contact-bar p { font-size: 13px; color: #94A3B8; max-width: 560px; line-height: 1.6; }
+.contact-bar .phone-link {
+  font-family: var(--serif); font-size: 22px; font-style: italic;
+  color: white; text-decoration: none; white-space: nowrap;
+  padding-left: 40px; border-left: var(--border-blue);
+  margin-left: 40px; flex-shrink: 0;
+}
+.contact-bar .phone-link:hover { color: #93C5FD; }
+
+/* ═══ ALABASTER ══════════════════════════════════════════════════════ */
+.alabaster { background: var(--alabaster); }
+
+/* ═══ SPLIT GRID ═════════════════════════════════════════════════════ */
+.split-grid { display: grid; grid-template-columns: 1fr 1fr; border: var(--border); }
+.split-grid .half { padding: 44px 40px; border-right: var(--border); }
+.split-grid .half:last-child { border-right: none; }
+
+/* ═══ CHECKLIST ══════════════════════════════════════════════════════ */
+.checklist { list-style: none; margin-top: 8px; }
+.checklist li {
+  padding: 14px 0; border-bottom: var(--border);
+  display: flex; gap: 14px; align-items: flex-start;
+  font-size: 14px; line-height: 1.65; color: var(--slate-mid);
+}
+.checklist li:last-child { border-bottom: none; }
+.check-mark {
+  width: 18px; height: 18px; border: var(--border-blue);
+  background: var(--blue); display: flex; align-items: center;
+  justify-content: center; flex-shrink: 0; margin-top: 2px;
+}
+.check-mark::after { content: '✓'; font-size: 10px; color: white; font-weight: 700; }
+
+/* ═══ TABLE ══════════════════════════════════════════════════════════ */
+.data-table { width: 100%; border-collapse: collapse; border: var(--border); }
+.data-table th {
+  padding: 14px 20px; text-align: left;
+  font-size: 10px; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; color: white;
+  background: var(--slate); border-right: 1px solid #334155;
+}
+.data-table th:last-child { border-right: none; }
+.data-table td {
+  padding: 18px 20px; font-size: 14px; color: var(--slate-mid);
+  border-right: var(--border); border-bottom: var(--border);
+  vertical-align: top; line-height: 1.55;
+}
+.data-table td:last-child { border-right: none; }
+.data-table tr:last-child td { border-bottom: none; }
+.data-table td:first-child {
+  font-weight: 600; color: var(--slate);
+  font-family: var(--serif); font-size: 16px;
+}
+.data-table tr:nth-child(even) td { background: var(--cool-white); }
+
+/* ═══ HIGHLIGHT BOX ══════════════════════════════════════════════════ */
+.highlight-box {
+  border: var(--border-blue); padding: 24px 28px;
+  margin-top: 24px; background: var(--blue-light);
+}
+.highlight-box p { font-size: 13px; line-height: 1.75; color: var(--slate-mid); }
+.highlight-box strong { color: var(--blue); }
+
+/* ═══ FORM ═══════════════════════════════════════════════════════════ */
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; border: var(--border); }
+.form-field {
+  border-bottom: var(--border); border-right: var(--border);
+  display: flex; flex-direction: column;
+}
+.form-field:nth-child(even) { border-right: none; }
+.form-field.full-width { grid-column: 1 / -1; border-right: none; }
+.form-field label {
+  font-size: 10px; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--slate-light);
+  padding: 14px 20px 0;
+}
+.form-field input, .form-field select, .form-field textarea {
+  border: none; outline: none;
+  font-family: var(--sans); font-size: 14px; color: var(--slate);
+  background: transparent; padding: 8px 20px 14px; resize: none; -webkit-appearance: none;
+}
+.form-field input:focus, .form-field select:focus { background: var(--blue-light); }
+.form-submit-row { padding: 20px 0 0; }
+
+/* ═══ TECH TAGS ══════════════════════════════════════════════════════ */
+.tech-tags { display: flex; flex-wrap: wrap; border: var(--border); margin-top: 24px; }
+.tech-tag {
+  padding: 12px 20px; font-size: 12px; font-weight: 500;
+  color: var(--slate-mid); border-right: var(--border);
+  display: flex; align-items: center; gap: 8px;
+}
+.tech-tag:last-child { border-right: none; }
+.tech-dot { width: 6px; height: 6px; background: var(--blue); flex-shrink: 0; }
+
+/* ═══ CURRICULUM ═════════════════════════════════════════════════════ */
+.curriculum-grid { display: grid; grid-template-columns: repeat(3, 1fr); border: var(--border); }
+.curriculum-col { padding: 32px 28px; border-right: var(--border); }
+.curriculum-col:last-child { border-right: none; }
+.curriculum-col h4 {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--blue);
+  margin-bottom: 16px; padding-bottom: 12px; border-bottom: var(--border-blue);
+}
+.curriculum-col ul { list-style: none; }
+.curriculum-col ul li {
+  font-size: 13px; color: var(--slate-mid);
+  padding: 7px 0; border-bottom: var(--border);
+  display: flex; align-items: center; gap: 8px;
+}
+.curriculum-col ul li:last-child { border-bottom: none; }
+.curriculum-col ul li::before { content: '—'; color: #CBD5E1; font-size: 11px; flex-shrink: 0; }
+
+/* ═══ DUAL CTA ═══════════════════════════════════════════════════════ */
+.dual-cta { display: grid; grid-template-columns: 1fr 1fr; border: var(--border); }
+.cta-box { padding: 40px 36px; border-right: var(--border); }
+.cta-box:last-child { border-right: none; }
+.cta-box h4 {
+  font-family: var(--serif); font-size: 20px;
+  font-weight: 600; margin-bottom: 12px; color: var(--slate);
+}
+.cta-box p { font-size: 13px; color: var(--slate-mid); line-height: 1.75; margin-bottom: 12px; }
+.cta-box a { color: var(--blue); text-decoration: none; font-weight: 500; }
+.cta-box a:hover { text-decoration: underline; }
+
+/* ═══ TESTIMONIAL ════════════════════════════════════════════════════ */
+.testimonial-strip {
+  background: var(--blue); padding: 60px 64px;
+  border-bottom: var(--border);
+}
+.testimonial-inner { max-width: 760px; margin: 0 auto; text-align: center; }
+.testimonial-inner blockquote {
+  font-family: var(--serif); font-size: clamp(18px, 2.5vw, 26px);
+  font-style: italic; color: white; line-height: 1.5; margin-bottom: 20px;
+}
+.testimonial-inner cite {
+  font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: rgba(255,255,255,0.55); font-style: normal;
+}
+
+/* ═══ GALLERY STRIP ══════════════════════════════════════════════════ */
+.gallery-strip {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  border-bottom: var(--border);
+}
+.gallery-cell { position: relative; overflow: hidden; aspect-ratio: 1; border-right: var(--border); }
+.gallery-cell:last-child { border-right: none; }
+.gallery-cell img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.5s ease; display: block;
+}
+.gallery-cell:hover img { transform: scale(1.04); }
+.gallery-label {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(15,23,42,0.85) 0%, transparent 100%);
+  padding: 20px 16px 14px;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; color: white;
+}
+
+/* ═══ FOOTER ══════════════════════════════════════════════════════════ */
+footer {
+  background: var(--slate);
+  border-top: 2px solid var(--blue);
+  display: grid; grid-template-columns: 1.4fr 1fr 1fr;
+}
+.footer-col { padding: 48px 40px; border-right: 1px solid #1E293B; }
+.footer-col:last-child { border-right: none; }
+.footer-logo-mark {
+  width: 36px; height: 36px; background: var(--blue);
+  display: flex; align-items: center; justify-content: center; margin-bottom: 16px;
+}
+.footer-logo-mark svg { width: 20px; height: 20px; }
+.footer-col h5 {
+  font-family: var(--serif); font-size: 15px;
+  color: white; font-weight: 600; margin-bottom: 12px;
+}
+.footer-col p, .footer-col address {
+  font-size: 12px; color: #64748B; line-height: 1.85; font-style: normal;
+}
+.footer-col a { color: #64748B; text-decoration: none; font-size: 12px; }
+.footer-col a:hover { color: #93C5FD; }
+.footer-copyright {
+  font-size: 11px; color: #334155;
+  margin-top: 16px; padding-top: 16px; border-top: 1px solid #1E293B;
+}
+.social-links { display: flex; flex-direction: column; gap: 0; margin-top: 4px; }
+.social-link {
+  display: flex; align-items: center; gap: 12px;
+  font-size: 12px; color: #64748B !important; text-decoration: none;
+  padding: 11px 0; border-bottom: 1px solid #1E293B; transition: color 0.12s;
+}
+.social-link:last-child { border-bottom: none; }
+.social-link:hover { color: #93C5FD !important; }
+.social-icon {
+  width: 28px; height: 28px; border: 1px solid #334155;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; color: #64748B; flex-shrink: 0;
+}
+
+/* ═══ RESPONSIVE ═════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .section { padding: 64px 40px; }
+  .hero-content-col { width: 420px; padding: 60px 40px; }
+  .contact-bar { padding: 32px 40px; }
+  .testimonial-strip { padding: 60px 40px; }
+}
+
+@media (max-width: 860px) {
+  #desktop-nav { display: none; }
+  #menu-btn { display: flex; }
+  #nav-drawer { display: block; }
+
+  .header-bar { padding: 0 20px; }
+  .section { padding: 52px 24px; }
+
+  /* Hero */
+  .hero-section { flex-direction: column; }
+  .hero-image-col { min-height: 260px; flex: none; }
+  .hero-content-col { width: 100%; border-left: none; border-top: var(--border); padding: 44px 24px; }
+
+  /* Grids */
+  .three-col, .split-grid, .curriculum-grid, .dual-cta, footer,
+  .img-text-row { grid-template-columns: 1fr; }
+
+  .three-col .col { border-right: none; border-bottom: var(--border); }
+  .three-col .col:last-child { border-bottom: none; }
+  .split-grid .half { border-right: none; border-bottom: var(--border); }
+  .split-grid .half:last-child { border-bottom: none; }
+  .curriculum-col { border-right: none; border-bottom: var(--border); }
+  .curriculum-col:last-child { border-bottom: none; }
+  .cta-box { border-right: none; border-bottom: var(--border); }
+  .cta-box:last-child { border-bottom: none; }
+  .footer-col { border-right: none; border-bottom: 1px solid #1E293B; }
+  .footer-col:last-child { border-bottom: none; }
+
+  .img-text-row.reverse { direction: ltr; }
+  .img-col { min-height: 240px; }
+  .text-col { padding: 44px 24px; }
+
+  /* Stat row */
+  .stat-row { grid-template-columns: 1fr 1fr; }
+  .stat-cell:nth-child(2) { border-right: none; }
+  .stat-cell:nth-child(3) { border-top: var(--border); }
+  .stat-cell:last-child { border-right: none; border-top: var(--border); }
+
+  /* Gallery */
+  .gallery-strip { grid-template-columns: 1fr 1fr; }
+  .gallery-cell:nth-child(2) { border-right: none; }
+  .gallery-cell:nth-child(3) { border-top: var(--border); border-right: var(--border); }
+  .gallery-cell:last-child { border-top: var(--border); border-right: none; }
+
+  /* Contact bar */
+  .contact-bar { flex-direction: column; gap: 20px; padding: 32px 24px; text-align: center; }
+  .contact-bar .phone-link { padding-left: 0; border-left: none; margin-left: 0; }
+
+  /* Form */
+  .form-grid { grid-template-columns: 1fr; }
+  .form-field { border-right: none; }
+  .form-field:nth-child(even) { border-right: none; }
+
+  /* Tech tags */
+  .tech-tags { flex-direction: column; }
+  .tech-tag { border-right: none; border-bottom: var(--border); }
+  .tech-tag:last-child { border-bottom: none; }
+
+  .testimonial-strip { padding: 52px 24px; }
+  .contact-bar { flex-direction: column; gap: 16px; }
+}
+
+@media (max-width: 480px) {
+  h1.display { font-size: 30px; }
+  h2.section-title { font-size: 22px; }
+  .stat-row { grid-template-columns: 1fr 1fr; }
+  .gallery-strip { grid-template-columns: 1fr 1fr; }
+  footer { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ HEADER ══════════════════════════════════════════════════════════ -->
+<header id="site-header">
+  <div class="header-bar">
+    <a class="logo-wrap" href="#" onclick="showPage('home'); return false;">
+      <div class="logo-mark">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <line x1="12" y1="2" x2="12" y2="22" stroke="white" stroke-width="2.5"/>
+          <line x1="2" y1="12" x2="22" y2="12" stroke="white" stroke-width="2.5"/>
+          <circle cx="12" cy="12" r="2.5" fill="white"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="line1">AOSK Tumaini Centre</span>
+        <span class="line2">Association of Sisterhoods of Kenya</span>
+      </div>
+    </a>
+
+    <!-- DESKTOP NAV -->
+    <nav id="desktop-nav" aria-label="Primary">
+
+      <div class="dnav-item">
+        <a class="dnav-link" href="#" onclick="showPage('home'); return false;">
+          Home <span class="dnav-arrow">▾</span>
+        </a>
+        <div class="dnav-dropdown">
+          <a class="dnav-dropdown-page" href="#" onclick="showPage('home'); return false;">Home &amp; Overview</a>
+          <div class="dnav-divider"></div>
+          <a class="dnav-sub-link" href="#" onclick="navTo('home','pillars-section'); return false;">Core Pillars</a>
+          <a class="dnav-sub-link" href="#" onclick="navTo('home','location-section'); return false;">Location Advantage</a>
+          <a class="dnav-sub-link" href="#" onclick="navTo('home','gallery-section'); return false;">Photo Gallery</a>
+        </div>
+      </div>
+
+      <div class="dnav-item">
+        <a class="dnav-link" href="#" onclick="showPage('about'); return false;">
+          Our Foundation <span class="dnav-arrow">▾</span>
+        </a>
+        <div class="dnav-dropdown">
+          <a class="dnav-dropdown-page" href="#" onclick="showPage('about'); return false;">The Holy Foundation</a>
+          <a class="dnav-sub-link" href="#" onclick="navTo('about','heritage-section'); return false;">Legacy since 1962</a>
+          <a class="dnav-sub-link" href="#" onclick="navTo('about','vision-section'); return false;">Vision &amp; Mission</a>
+          <a class="dnav-sub-link" href="#" onclick="navTo('about','aims-section'); return false;">Threefold Aim</a>
+        </div>
+      </div>
+
+      <div class="dnav-item">
+        <a class="dnav-link" href="#" onclick="showPage('accom'); return false;">
+          Accommodation <span class="dnav-arrow">▾</span>
+        </a>
+        <div class="dnav-dropdown">
+          <a class="dnav-dropdown-page" href="#" onclick="showPage('accom'); return false;">Executive Accommodation</a>
+          <a class="dnav-sub-link" href="#" onclick="navTo('accom','packages-section'); return false;">Board Packages</a>
+          <a class="dnav-sub-link" href="#" onclick="navTo('accom','amenities-section'); return false;">Guest Amenities</a>
+          <a class="dnav-sub-link" href="#" onclick="navTo('accom','stay-form-section'); return false;">Reserve a Stay</a>
+        </div>
+      </div>
+
+      <div class="dnav-item">
+        <a class="dnav-link" href="#" onclick="showPage('meetings'); return false;">
+          Conferences <span class="dnav-arrow">▾</span>
+        </a>
+        <div class="dnav-dropdown">
+          <a class="dnav-dropdown-page" href="#" onclick="showPage('meetings'); return false;">Meetings &amp; Workshops</a>
+          <a class="dnav-sub-link" href="#" onclick="navTo('meetings','capacity-section'); return false;">Conference Capacity</a>
+          <a class="dnav-sub-link" href="#" onclick="navTo('meetings','tech-section'); return false;">Technical Facilities</a>
+          <a class="dnav-sub-link" href="#" onclick="navTo('meetings','rfq-section'); return false;">Request a Quote</a>
+        </div>
+      </div>
+
+      <div class="dnav-item">
+        <a class="dnav-link" href="#" onclick="showPage('ict'); return false;">
+          ICT Training <span class="dnav-arrow">▾</span>
+        </a>
+        <div class="dnav-dropdown">
+          <a class="dnav-dropdown-page" href="#" onclick="showPage('ict'); return false;">ICT Training Lab</a>
+          <a class="dnav-sub-link" href="#" onclick="navTo('ict','legacy-section'); return false;">Our Training Legacy</a>
+          <a class="dnav-sub-link" href="#" onclick="navTo('ict','curriculum-section'); return false;">Curriculum Directory</a>
+          <a class="dnav-sub-link" href="#" onclick="navTo('ict','cta-section'); return false;">Enroll / Hire Lab</a>
+        </div>
+      </div>
+
+    </nav>
+
+    <!-- MOBILE HAMBURGER -->
+    <button id="menu-btn" onclick="toggleMobileMenu()" aria-expanded="false" aria-controls="nav-drawer">
+      <div class="hamburger"><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
+      Menu
+    </button>
+  </div>
+
+  <!-- MOBILE DRAWER -->
+  <nav id="nav-drawer" aria-label="Mobile navigation">
+    <div class="mob-nav-item" id="mob-home">
+      <div class="mob-nav-header" onclick="toggleMobItem('mob-home')">
+        <span class="mob-nav-arrow">►</span>
+        <span class="mob-nav-title">1. Home &amp; Overview</span>
+      </div>
+      <div class="mob-nav-sub">
+        <a class="mob-nav-page-link" href="#" onclick="showPage('home'); return false;">→ Go to Home</a>
+        <div class="mob-sub-links">
+          <a class="mob-sub-link" href="#" onclick="navTo('home','pillars-section'); return false;">Core Pillars</a>
+          <a class="mob-sub-link" href="#" onclick="navTo('home','location-section'); return false;">Location Advantage</a>
+        </div>
+      </div>
+    </div>
+    <div class="mob-nav-item" id="mob-about">
+      <div class="mob-nav-header" onclick="toggleMobItem('mob-about')">
+        <span class="mob-nav-arrow">►</span>
+        <span class="mob-nav-title">2. The Holy Foundation</span>
+      </div>
+      <div class="mob-nav-sub">
+        <a class="mob-nav-page-link" href="#" onclick="showPage('about'); return false;">→ Go to Foundation</a>
+        <div class="mob-sub-links">
+          <a class="mob-sub-link" href="#" onclick="navTo('about','heritage-section'); return false;">Legacy since 1962</a>
+          <a class="mob-sub-link" href="#" onclick="navTo('about','vision-section'); return false;">Vision &amp; Mission</a>
+          <a class="mob-sub-link" href="#" onclick="navTo('about','aims-section'); return false;">Threefold Aim</a>
+        </div>
+      </div>
+    </div>
+    <div class="mob-nav-item" id="mob-accom">
+      <div class="mob-nav-header" onclick="toggleMobItem('mob-accom')">
+        <span class="mob-nav-arrow">►</span>
+        <span class="mob-nav-title">3. Executive Accommodation</span>
+      </div>
+      <div class="mob-nav-sub">
+        <a class="mob-nav-page-link" href="#" onclick="showPage('accom'); return false;">→ Go to Accommodation</a>
+        <div class="mob-sub-links">
+          <a class="mob-sub-link" href="#" onclick="navTo('accom','packages-section'); return false;">Board Packages</a>
+          <a class="mob-sub-link" href="#" onclick="navTo('accom','stay-form-section'); return false;">Reserve a Stay</a>
+        </div>
+      </div>
+    </div>
+    <div class="mob-nav-item" id="mob-meetings">
+      <div class="mob-nav-header" onclick="toggleMobItem('mob-meetings')">
+        <span class="mob-nav-arrow">►</span>
+        <span class="mob-nav-title">4. Meetings &amp; Workshops</span>
+      </div>
+      <div class="mob-nav-sub">
+        <a class="mob-nav-page-link" href="#" onclick="showPage('meetings'); return false;">→ Go to Conferences</a>
+        <div class="mob-sub-links">
+          <a class="mob-sub-link" href="#" onclick="navTo('meetings','capacity-section'); return false;">Conference Capacity</a>
+          <a class="mob-sub-link" href="#" onclick="navTo('meetings','rfq-section'); return false;">Request a Quote</a>
+        </div>
+      </div>
+    </div>
+    <div class="mob-nav-item" id="mob-ict">
+      <div class="mob-nav-header" onclick="toggleMobItem('mob-ict')">
+        <span class="mob-nav-arrow">►</span>
+        <span class="mob-nav-title">5. ICT Training Lab</span>
+      </div>
+      <div class="mob-nav-sub">
+        <a class="mob-nav-page-link" href="#" onclick="showPage('ict'); return false;">→ Go to ICT Lab</a>
+        <div class="mob-sub-links">
+          <a class="mob-sub-link" href="#" onclick="navTo('ict','curriculum-section'); return false;">Curriculum</a>
+          <a class="mob-sub-link" href="#" onclick="navTo('ict','cta-section'); return false;">Enroll / Hire</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<!-- ════════════════════════════════════════════════════════════════════ -->
+<!-- PAGE: HOME                                                          -->
+<!-- ════════════════════════════════════════════════════════════════════ -->
+<div class="page active" id="page-home">
+
+  <!-- Hero -->
+  <section class="hero-section" id="hero-section">
+    <div class="hero-image-col">
+      <img src="https://images.pexels.com/photos/28716363/pexels-photo-28716363.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Tranquil garden courtyard and seating area, representing a peaceful Nairobi retreat" loading="eager">
+      <div class="hero-overlay"></div>
+      <span class="hero-caption">Kilimani, Nairobi — Adams Arcade</span>
+    </div>
+    <div class="hero-content-col">
+      <p class="section-eyebrow">Est. 1962 · Kilimani, Nairobi</p>
+      <h1 class="display">A Sanctuary of Peace in the Heart of Nairobi.</h1>
+      <p class="hero-subtitle">Premium executive accommodation, state-of-the-art conferencing, and professional ICT empowerment — managed by the Association of Sisterhoods of Kenya.</p>
+      <div class="btn-group">
+        <button class="btn btn-primary" onclick="showPage('accom')">Reserve a Stay</button>
+        <button class="btn btn-outline" onclick="showPage('meetings')">Book a Conference Room</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <div class="stat-row">
+    <div class="stat-cell"><span class="stat-num">1962</span><span class="stat-label">Year Founded</span></div>
+    <div class="stat-cell"><span class="stat-num">160+</span><span class="stat-label">Member Congregations</span></div>
+    <div class="stat-cell"><span class="stat-num">100+</span><span class="stat-label">Conference Capacity</span></div>
+    <div class="stat-cell"><span class="stat-num">2008</span><span class="stat-label">ICT Lab Established</span></div>
+  </div>
+
+  <!-- About Tumaini intro -->
+  <section class="section" id="about-intro-section">
+    <p class="section-eyebrow">What is Tumaini Centre?</p>
+    <h2 class="section-title">Where Faith Meets Professional Excellence</h2>
+    <p class="lead-text">Tumaini — meaning <em>hope</em> in Swahili — is more than a name. It is the promise at the heart of everything we do. Nestled on Elgeyo Marakwet Road in Kilimani, Tumaini Centre is a purpose-built retreat and professional hub operated by the Association of Sisterhoods of Kenya (AOSK), one of the country's most enduring faith-based institutions.</p>
+    <p class="body-text">Whether you are a corporate executive seeking a tranquil base away from Nairobi's bustle, an NGO coordinating a multi-day workshop, a religious delegation visiting from abroad, or a professional looking to upgrade your digital skills — Tumaini Centre was built for you. Our facility blends the serenity of a spiritual retreat with the infrastructure of a modern professional centre: fast internet, full catering, secretarial support, and a purpose-built computer training lab that has quietly shaped Kenya's ICT landscape since 2008.</p>
+    <p class="body-text" style="margin-top:16px;">We sit just minutes from Yaya Centre and the Nairobi CBD via Ngong Road, yet our green, walled campus feels a world removed from city noise. That contrast — accessible yet serene — is what keeps our guests returning.</p>
+  </section>
+
+  <!-- Pillars -->
+  <section class="section" id="pillars-section" style="padding-top:0;">
+    <p class="section-eyebrow">The Tumaini Difference</p>
+    <h2 class="section-title">Three Pillars, One Centre</h2>
+    <div class="three-col" style="margin-top:32px;">
+      <div class="col">
+        <div class="col-icon">✛</div>
+        <h3 class="card-title">Rooted in Faith</h3>
+        <p class="body-text" style="max-width:none; font-size:14px;">Backed by over six decades of faith-driven service, AOSK brings institutional integrity, values-based governance, and a commitment to human dignity to every aspect of centre operations. Guests experience hospitality shaped by a genuine calling — not a corporate checklist.</p>
+      </div>
+      <div class="col">
+        <div class="col-icon">◈</div>
+        <h3 class="card-title">Executive Hospitality</h3>
+        <p class="body-text" style="max-width:none; font-size:14px;">Our accommodation and conferencing facilities are designed for people who need quiet, focused environments. Full-board catering, reliable internet, laundry services, and a calm campus atmosphere make Tumaini Centre the preferred choice for international delegates, government officers, and corporate teams across East Africa.</p>
+      </div>
+      <div class="col">
+        <div class="col-icon">◉</div>
+        <h3 class="card-title">Digital Empowerment</h3>
+        <p class="body-text" style="max-width:none; font-size:14px;">Since 2008, our ICT Training Lab has equipped hundreds of Nairobi residents with marketable digital skills — from office productivity and graphic design to computerised accounting using QuickBooks and Sage. The lab is also available for private hire by corporates and training organisations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image + Text: Location -->
+  <div class="img-text-row" id="location-section">
+    <div class="img-col">
+      <img src="https://images.pexels.com/photos/23483647/pexels-photo-23483647.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Lush garden walkway and outdoors area, evoking calm and green Nairobi living">
+      <div class="img-overlay"></div>
+    </div>
+    <div class="text-col">
+      <p class="section-eyebrow">Location Advantage</p>
+      <h2 class="section-title">Perfectly Positioned in Kilimani</h2>
+      <p class="body-text">Tumaini Centre sits on <strong>Elgeyo Marakwet Road, Adams Arcade</strong>, one of Nairobi's most desirable and accessible addresses. Our walled, green campus is completely insulated from the noise of the city — yet you are never far from where you need to be.</p>
+      <p class="body-text" style="margin-top:14px;">The Nairobi CBD is reachable via Ngong Road in under 20 minutes. Yaya Centre, Karen, and Westlands are all within easy reach. For international guests, the centre offers a calm, secure base that combines the advantages of a central Nairobi location with the peace of a retreat.</p>
+      <p class="body-text" style="margin-top:14px;">Our ample on-site parking, gated security, and professional front-of-house team ensure that every arrival feels like a welcome.</p>
+      <div style="margin-top:28px;">
+        <a href="tel:+254723577021" class="btn btn-primary">Call Us: +254 723 577 021</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gallery -->
+  <section id="gallery-section" style="border-bottom: var(--border);">
+    <div style="padding: 48px 64px 24px; border-bottom: var(--border);">
+      <p class="section-eyebrow">Inside Tumaini</p>
+      <h2 class="section-title">A Glimpse of Our Facilities</h2>
+    </div>
+    <div class="gallery-strip">
+      <div class="gallery-cell">
+        <img src="https://images.pexels.com/photos/32988208/pexels-photo-32988208.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Comfortable executive guest room with modern decor and warm lighting">
+        <div class="gallery-label">Guest Rooms</div>
+      </div>
+      <div class="gallery-cell">
+        <img src="https://images.pexels.com/photos/7433850/pexels-photo-7433850.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Professional meeting room with team collaborating around a table">
+        <div class="gallery-label">Conference Rooms</div>
+      </div>
+      <div class="gallery-cell">
+        <img src="https://images.pexels.com/photos/5621943/pexels-photo-5621943.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Student using a computer in a modern training lab">
+        <div class="gallery-label">ICT Training Lab</div>
+      </div>
+      <div class="gallery-cell">
+        <img src="https://images.pexels.com/photos/7219921/pexels-photo-7219921.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Elegant dining setup for full-board meals in a professional venue">
+        <div class="gallery-label">Full-Board Catering</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial -->
+  <div class="testimonial-strip">
+    <div class="testimonial-inner">
+      <blockquote>"Tumaini Centre gave our team exactly what we needed — a calm, professional environment where we could think clearly, collaborate deeply, and leave with real results. The catering was excellent and the internet never let us down."</blockquote>
+      <cite>— Workshop Coordinator, International NGO · Nairobi, Kenya</cite>
+    </div>
+  </div>
+
+  <!-- Contact bar -->
+  <div class="contact-bar">
+    <p>Ready to visit? Our team is available to assist with accommodation bookings, conference arrangements, and ICT enrolment. We respond within one business day.</p>
+    <a href="tel:+254723577021" class="phone-link">+254 723 577 021</a>
+  </div>
+
+</div>
+
+<!-- ════════════════════════════════════════════════════════════════════ -->
+<!-- PAGE: ABOUT / FOUNDATION                                            -->
+<!-- ════════════════════════════════════════════════════════════════════ -->
+<div class="page" id="page-about">
+
+  <!-- Heritage hero image -->
+  <div style="position:relative; height:320px; overflow:hidden; border-bottom: var(--border);">
+    <img src="https://images.pexels.com/photos/5238553/pexels-photo-5238553.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Nun in white habit standing outside a church, symbolising AOSK heritage" style="width:100%;height:100%;object-fit:cover;display:block;">
+    <div style="position:absolute;inset:0;background:linear-gradient(to right, rgba(15,23,42,0.80) 40%, rgba(15,23,42,0.30) 100%);"></div>
+    <div style="position:absolute;bottom:40px;left:64px;max-width:560px;">
+      <p style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:10px;">The Association of Sisterhoods of Kenya</p>
+      <h1 style="font-family:var(--serif);font-size:clamp(28px,4vw,48px);color:white;font-weight:700;line-height:1.15;">A Legacy of Faith, Service &amp; Sisterhood Since 1962.</h1>
+    </div>
+  </div>
+
+  <!-- Heritage -->
+  <section class="section alabaster" id="heritage-section">
+    <p class="section-eyebrow">Institutional Heritage</p>
+    <h2 class="section-title">Who We Are</h2>
+    <p class="lead-text">The Association of Sisterhoods of Kenya (AOSK) is one of the oldest and most respected faith-based organisations in East Africa — a unified body that has shaped education, healthcare, social welfare, and community development across Kenya for more than six decades.</p>
+    <p class="body-text">Founded in <strong>1962</strong> and formally registered as a corporate body under the <strong>Perpetual Succession Act</strong>, AOSK serves as the coordinating umbrella for Catholic Women's Religious Congregations throughout Kenya. With membership spanning over <strong>160 congregations</strong> representing nearly <strong>6,000 sisters</strong>, the association channels the collective strength of a vast sisterhood towards tangible social transformation.</p>
+    <p class="body-text" style="margin-top:16px;">AOSK works at the intersection of faith and society — advocating for justice, promoting holistic formation of religious women, and partnering with the Kenya Episcopal Conference (KEC) to address the evolving needs of Kenyan communities. Tumaini Centre is the physical expression of this mission in Nairobi: a space built to host, train, equip, and inspire.</p>
+  </section>
+
+  <!-- Image + text -->
+  <div class="img-text-row reverse">
+    <div class="text-col">
+      <p class="section-eyebrow">Our Name, Our Promise</p>
+      <h2 class="section-title">Why "Tumaini"?</h2>
+      <p class="body-text"><em>Tumaini</em> is the Swahili word for <strong>hope</strong>. It is the defining word of this centre's identity — and no name could be more fitting for a facility born from the vision of thousands of women who have dedicated their lives to serving others.</p>
+      <p class="body-text" style="margin-top:14px;">Every guest who walks through our gates — whether arriving for a three-day board retreat, a digital skills course, or a quiet overnight stay — arrives at a place built on the belief that human beings flourish when they are cared for, equipped, and surrounded by peace.</p>
+      <p class="body-text" style="margin-top:14px;">That is Tumaini. That is what we offer.</p>
+    </div>
+    <div class="img-col">
+      <img src="https://images.pexels.com/photos/37116796/pexels-photo-37116796.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Two nuns standing together outside a church entrance, embodying faith and sisterhood">
+      <div class="img-overlay"></div>
+    </div>
+  </div>
+
+  <!-- Vision & Mission -->
+  <section class="section" id="vision-section">
+    <p class="section-eyebrow">Vision &amp; Mission</p>
+    <h2 class="section-title">What Guides Us</h2>
+    <div class="split-grid" style="margin-top:32px;">
+      <div class="half">
+        <p class="section-eyebrow" style="margin-bottom:16px;">Our Vision</p>
+        <h3 style="font-family:var(--serif);font-size:20px;font-style:italic;line-height:1.5;color:var(--slate);font-weight:600;">"To be an association of Prophetic religious women united in Christ witnessing love and hope for the transformation of society."</h3>
+        <p class="body-text" style="margin-top:16px;max-width:none;font-size:13px;">This vision shapes every decision we make — from how we welcome guests at Tumaini Centre to how we engage with national policy on justice, peace, and the environment.</p>
+      </div>
+      <div class="half">
+        <p class="section-eyebrow" style="margin-bottom:16px;">Our Mission</p>
+        <p class="body-text" style="max-width:none;">To respond to the needs of Religious women for solid holistic formation, education, and skills for ministry and leadership — while speaking with a unified voice on issues related to justice, peace, and integrity of creation.</p>
+        <p class="body-text" style="margin-top:14px;max-width:none;">Tumaini Centre operationalises this mission by providing a world-class environment where formation, education, and rest coexist.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Threefold Aim -->
+  <section class="section alabaster" id="aims-section">
+    <p class="section-eyebrow">Threefold Aim</p>
+    <h2 class="section-title">Our Guiding Commitments</h2>
+    <p class="body-text" style="margin-bottom:32px;">AOSK was established around three interlocking commitments that remain as relevant today as they were in 1962:</p>
+    <ul class="checklist" style="max-width:800px;">
+      <li><div class="check-mark"></div><div><strong style="color:var(--slate);">Spiritual Welfare</strong> — Promote the spiritual welfare and holistic development of Religious Women in Kenya, supporting their formation, mental wellbeing, and continued growth in ministry.</div></li>
+      <li><div class="check-mark"></div><div><strong style="color:var(--slate);">Unity &amp; Co-operation</strong> — Foster communication and collaboration among member institutes, respecting each congregation's autonomy, unique charism, and spiritual tradition.</div></li>
+      <li><div class="check-mark"></div><div><strong style="color:var(--slate);">National Partnership</strong> — Promote active collaboration with the Kenya Episcopal Conference (KEC) to identify and respond to the social, spiritual, and developmental needs of the people of Kenya.</div></li>
+    </ul>
+  </section>
+
+</div>
+
+<!-- ════════════════════════════════════════════════════════════════════ -->
+<!-- PAGE: ACCOMMODATION                                                  -->
+<!-- ════════════════════════════════════════════════════════════════════ -->
+<div class="page" id="page-accom">
+
+  <!-- Hero image -->
+  <div style="position:relative;height:300px;overflow:hidden;border-bottom:var(--border);">
+    <img src="https://images.pexels.com/photos/35103155/pexels-photo-35103155.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Modern executive hotel room with clean lines and warm lighting" style="width:100%;height:100%;object-fit:cover;display:block;">
+    <div style="position:absolute;inset:0;background:rgba(15,23,42,0.55);"></div>
+    <div style="position:absolute;bottom:36px;left:64px;">
+      <p style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:8px;">Accommodation · Nairobi, Kilimani</p>
+      <h1 style="font-family:var(--serif);font-size:clamp(26px,3.5vw,44px);color:white;font-weight:700;">Executive Accommodation at Tumaini Centre</h1>
+    </div>
+  </div>
+
+  <!-- Intro -->
+  <section class="section" id="amenities-section">
+    <p class="section-eyebrow">Why Stay at Tumaini?</p>
+    <h2 class="section-title">Quiet, Dignified, Purposeful Rest.</h2>
+    <p class="lead-text">Not all accommodation in Nairobi is created equal. Tumaini Centre offers something the city's hotels rarely can: genuine tranquillity within a secure, professionally managed campus — without the premium price tag of a five-star hotel.</p>
+    <p class="body-text">Our rooms are designed for executives, delegates, researchers, and ministry workers who need a calm base from which to do their best work. You will sleep well, eat well, and feel supported throughout your stay. Our housekeeping team, reliable Wi-Fi, and attentive front-of-house staff ensure that nothing is left to chance.</p>
+    <p class="body-text" style="margin-top:14px;">The campus accommodates <strong>over 25 guests</strong> simultaneously, making Tumaini Centre an excellent choice for group bookings — retreats, training cohorts, or delegations travelling together. All room rates include access to common areas, on-site parking, and 24-hour security.</p>
+    <div class="highlight-box">
+      <p><strong>Included with all stays:</strong> High-speed wireless internet · Fresh linen &amp; towels · Full laundry services for extended stays · On-site catering (package dependent) · 24-hour gated security · Ample parking · Dedicated housekeeping</p>
+    </div>
+  </section>
+
+  <!-- Image + text -->
+  <div class="img-text-row">
+    <div class="img-col">
+      <img src="https://images.pexels.com/photos/31296628/pexels-photo-31296628.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Cozy accommodation interior with natural light and pleasant decor">
+      <div class="img-overlay"></div>
+    </div>
+    <div class="text-col">
+      <p class="section-eyebrow">Who Stays With Us</p>
+      <h2 class="section-title">Built for Professionals Who Value Peace</h2>
+      <p class="body-text">Our guests include international delegates attending regional conferences, NGO teams running multi-day training programmes, Catholic sisters visiting Nairobi for formation or consultation, corporate managers seeking a distraction-free working retreat, and short-stay travellers passing through Nairobi who want something better than a generic city hotel.</p>
+      <p class="body-text" style="margin-top:14px;">Whatever brings you to Nairobi, Tumaini Centre offers a base that is calm, safe, affordable, and genuinely hospitable. Our staff treat every guest with the dignity and warmth that defines the AOSK spirit.</p>
+    </div>
+  </div>
+
+  <!-- Packages -->
+  <section class="section" id="packages-section">
+    <p class="section-eyebrow">Board Packages</p>
+    <h2 class="section-title">Flexible Options for Every Stay</h2>
+    <p class="body-text" style="margin-bottom:32px;">We offer three board configurations to match your schedule, budget, and the nature of your visit. All packages include an overnight stay in a comfortable, well-maintained room.</p>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Package</th>
+          <th>What Is Included</th>
+          <th>Ideal For</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Full Board</td>
+          <td>Overnight stay with breakfast, lunch, and dinner prepared by our in-house catering team. All meals served in the dining hall.</td>
+          <td>Extended corporate workshops, spiritual retreats, and international delegations who prefer not to leave the campus.</td>
+        </tr>
+        <tr>
+          <td>Half Board</td>
+          <td>Overnight stay with breakfast and one principal meal (lunch or dinner, as agreed at check-in).</td>
+          <td>Field researchers, active business travellers, and guests who spend their days offsite but want a proper meal on return.</td>
+        </tr>
+        <tr>
+          <td>Bed &amp; Breakfast</td>
+          <td>Overnight stay with a premium morning breakfast — a wholesome, freshly prepared start to the day.</td>
+          <td>Short transit stays, city stopovers, and guests exploring Nairobi independently during the day.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Reservation Form -->
+  <section class="section alabaster" id="stay-form-section">
+    <p class="section-eyebrow">Reserve Your Stay</p>
+    <h2 class="section-title">Make an Accommodation Inquiry</h2>
+    <p class="body-text" style="margin-bottom:32px;">Complete the form below and our reservations team will confirm availability and send you a detailed quote within one business day. For urgent bookings, call us directly on <strong>+254 723 577 021</strong>.</p>
+    <div class="form-grid" style="max-width:900px;">
+      <div class="form-field">
+        <label>Full Name</label>
+        <input type="text" placeholder="e.g. Jane Wanjiku">
+      </div>
+      <div class="form-field">
+        <label>Organisation / Institution</label>
+        <input type="text" placeholder="Company, NGO, or Ministry">
+      </div>
+      <div class="form-field">
+        <label>Check-in Date</label>
+        <input type="date">
+      </div>
+      <div class="form-field">
+        <label>Check-out Date</label>
+        <input type="date">
+      </div>
+      <div class="form-field">
+        <label>Preferred Board Package</label>
+        <select>
+          <option value="">Select a package…</option>
+          <option>Full Board</option>
+          <option>Half Board</option>
+          <option>Bed &amp; Breakfast</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label>Estimated Group Size</label>
+        <input type="number" placeholder="Number of guests" min="1" max="30">
+      </div>
+      <div class="form-field full-width" style="border-bottom:var(--border);">
+        <label>Special Requirements or Notes</label>
+        <textarea rows="3" placeholder="Dietary needs, accessibility requirements, purpose of visit…"></textarea>
+      </div>
+    </div>
+    <div class="form-submit-row">
+      <button class="btn btn-primary">Submit Accommodation Inquiry</button>
+    </div>
+  </section>
+
+</div>
+
+<!-- ════════════════════════════════════════════════════════════════════ -->
+<!-- PAGE: MEETINGS & WORKSHOPS                                           -->
+<!-- ════════════════════════════════════════════════════════════════════ -->
+<div class="page" id="page-meetings">
+
+  <!-- Hero image -->
+  <div style="position:relative;height:300px;overflow:hidden;border-bottom:var(--border);">
+    <img src="https://images.pexels.com/photos/5668498/pexels-photo-5668498.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Diverse colleagues collaborating around a large meeting table" style="width:100%;height:100%;object-fit:cover;display:block;">
+    <div style="position:absolute;inset:0;background:rgba(15,23,42,0.60);"></div>
+    <div style="position:absolute;bottom:36px;left:64px;">
+      <p style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:8px;">Meetings · Workshops · Seminars</p>
+      <h1 style="font-family:var(--serif);font-size:clamp(26px,3.5vw,44px);color:white;font-weight:700;">Conference Facilities in Nairobi's Kilimani District</h1>
+    </div>
+  </div>
+
+  <!-- Capacity Overview -->
+  <section class="section" id="capacity-section">
+    <p class="section-eyebrow">Conference Facilities</p>
+    <h2 class="section-title">Nairobi's Best-Kept Conference Secret</h2>
+    <p class="lead-text">Looking for a professional, affordable conference venue in Nairobi that won't put your team in a soulless hotel ballroom? Tumaini Centre offers fully equipped meeting rooms in a serene, campus-style setting — the kind of environment where real thinking gets done.</p>
+    <p class="body-text">Our combined conference spaces accommodate <strong>over 100 delegates</strong>, making us suitable for everything from intimate 10-person board sessions to full-scale seminars, annual general meetings, training workshops, and NGO strategy retreats. The calm of our Kilimani campus — combined with reliable technology, full catering options, and on-site accommodation for multi-day events — sets us apart from conventional conference venues.</p>
+    <p class="body-text" style="margin-top:14px;">We serve a wide range of clients: government ministries, international development organisations, corporate training departments, faith-based institutions, professional associations, and academic research teams. If your team needs to think, plan, or collaborate — we have the space and the support.</p>
+  </section>
+
+  <!-- Image + tech -->
+  <div class="img-text-row reverse" id="tech-section">
+    <div class="text-col">
+      <p class="section-eyebrow">Technical Facilities</p>
+      <h2 class="section-title">Everything Your Event Needs, In-House</h2>
+      <p class="body-text">We understand that a successful conference depends as much on logistics as it does on content. That is why Tumaini Centre provides a comprehensive suite of business and secretarial services — so your team can focus entirely on the work at hand.</p>
+      <div class="tech-tags" style="margin-top:24px;">
+        <div class="tech-tag"><div class="tech-dot"></div>High-Speed Wireless Internet</div>
+        <div class="tech-tag"><div class="tech-dot"></div>Secretarial Support</div>
+        <div class="tech-tag"><div class="tech-dot"></div>Business Centre</div>
+        <div class="tech-tag"><div class="tech-dot"></div>Email &amp; Print</div>
+        <div class="tech-tag"><div class="tech-dot"></div>Fax &amp; Photocopy</div>
+        <div class="tech-tag"><div class="tech-dot"></div>Web Surfing Station</div>
+      </div>
+      <p class="body-text" style="margin-top:20px;">Need to print 80 copies of a participant handbook at 7am? Need a fax sent to Geneva before the morning plenary? Our team handles it — professionally, promptly, and without fuss.</p>
+    </div>
+    <div class="img-col">
+      <img src="https://images.pexels.com/photos/5668496/pexels-photo-5668496.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Businesswoman taking notes during a professional meeting">
+      <div class="img-overlay"></div>
+    </div>
+  </div>
+
+  <!-- RFQ Form -->
+  <section class="section alabaster" id="rfq-section">
+    <p class="section-eyebrow">Request a Quote</p>
+    <h2 class="section-title">Tell Us About Your Event</h2>
+    <p class="body-text" style="margin-bottom:32px;">Share your event details below and our conference team will prepare a tailored proposal — including room configuration, catering options, and a full cost breakdown — within two business days. No obligation.</p>
+    <div class="form-grid" style="max-width:900px;">
+      <div class="form-field">
+        <label>Event Name</label>
+        <input type="text" placeholder="e.g. Annual Strategy Workshop 2025">
+      </div>
+      <div class="form-field">
+        <label>Sponsoring Organisation / NGO</label>
+        <input type="text" placeholder="Organisation or institution name">
+      </div>
+      <div class="form-field">
+        <label>Total Expected Attendees</label>
+        <input type="number" placeholder="e.g. 60" min="1">
+      </div>
+      <div class="form-field">
+        <label>Event Duration (Days)</label>
+        <input type="number" placeholder="e.g. 2" min="1">
+      </div>
+      <div class="form-field">
+        <label>Preferred Start Date</label>
+        <input type="date">
+      </div>
+      <div class="form-field">
+        <label>Accommodation Required?</label>
+        <select>
+          <option value="">Select…</option>
+          <option>Yes — Full Board</option>
+          <option>Yes — Half Board</option>
+          <option>Yes — B&amp;B only</option>
+          <option>No — Day event only</option>
+        </select>
+      </div>
+      <div class="form-field full-width" style="border-bottom:var(--border);">
+        <label>Secretarial Services Needed</label>
+        <div style="padding:10px 20px 14px;display:flex;gap:20px;flex-wrap:wrap;">
+          <label style="padding:0;font-size:13px;color:var(--slate-mid);display:flex;gap:6px;align-items:center;letter-spacing:0;text-transform:none;font-weight:400;"><input type="checkbox" style="accent-color:var(--blue);"> Printing</label>
+          <label style="padding:0;font-size:13px;color:var(--slate-mid);display:flex;gap:6px;align-items:center;letter-spacing:0;text-transform:none;font-weight:400;"><input type="checkbox" style="accent-color:var(--blue);"> Fax</label>
+          <label style="padding:0;font-size:13px;color:var(--slate-mid);display:flex;gap:6px;align-items:center;letter-spacing:0;text-transform:none;font-weight:400;"><input type="checkbox" style="accent-color:var(--blue);"> Photocopying</label>
+          <label style="padding:0;font-size:13px;color:var(--slate-mid);display:flex;gap:6px;align-items:center;letter-spacing:0;text-transform:none;font-weight:400;"><input type="checkbox" style="accent-color:var(--blue);"> Secretarial Support</label>
+          <label style="padding:0;font-size:13px;color:var(--slate-mid);display:flex;gap:6px;align-items:center;letter-spacing:0;text-transform:none;font-weight:400;"><input type="checkbox" style="accent-color:var(--blue);"> Web Research Station</label>
+        </div>
+      </div>
+    </div>
+    <div class="form-submit-row">
+      <button class="btn btn-primary">Submit Conference Inquiry</button>
+    </div>
+  </section>
+
+</div>
+
+<!-- ════════════════════════════════════════════════════════════════════ -->
+<!-- PAGE: ICT TRAINING LAB                                              -->
+<!-- ════════════════════════════════════════════════════════════════════ -->
+<div class="page" id="page-ict">
+
+  <!-- Hero image -->
+  <div style="position:relative;height:300px;overflow:hidden;border-bottom:var(--border);">
+    <img src="https://images.pexels.com/photos/10638075/pexels-photo-10638075.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Students working at computers in a modern ICT training environment" style="width:100%;height:100%;object-fit:cover;display:block;">
+    <div style="position:absolute;inset:0;background:rgba(15,23,42,0.60);"></div>
+    <div style="position:absolute;bottom:36px;left:64px;">
+      <p style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:8px;">ICT Training · Nairobi, Kenya — Est. 2008</p>
+      <h1 style="font-family:var(--serif);font-size:clamp(26px,3.5vw,44px);color:white;font-weight:700;">Computer Training That Opens Doors in Kenya</h1>
+    </div>
+  </div>
+
+  <!-- Legacy -->
+  <section class="section" id="legacy-section">
+    <p class="section-eyebrow">ICT Training Lab — Established 2008</p>
+    <h2 class="section-title">Shaping Kenya's Digital Workforce Since 2008</h2>
+    <p class="lead-text">In a country where digital literacy is increasingly the dividing line between opportunity and exclusion, the AOSK Computer Training Lab has quietly and consistently done the work that matters — equipping ordinary Kenyans with extraordinary skills.</p>
+    <p class="body-text">Since its establishment in 2008, the A.O.S.K Computer Lab has trained hundreds of students from across Nairobi in practical, market-relevant digital skills. Our programmes range from foundational computer literacy — ideal for first-time users — to advanced courses in graphic design, web development, and computerised accounting using industry-standard platforms like QuickBooks, Sage, and Pastel.</p>
+    <p class="body-text" style="margin-top:14px;">Training is delivered by <strong>highly qualified and experienced professionals</strong> who bring both technical expertise and genuine commitment to learner success. Class sizes are intentionally kept manageable, ensuring every student receives the attention they need to truly master new skills — not just pass a test.</p>
+    <p class="body-text" style="margin-top:14px;">Whether you are a school leaver looking for your first job, a professional seeking to upskill, a business owner wanting to modernise your accounts, or a corporate training manager seeking an external facility — the A.O.S.K Computer Lab has a programme for you.</p>
+  </section>
+
+  <!-- Image + text -->
+  <div class="img-text-row">
+    <div class="img-col">
+      <img src="https://images.pexels.com/photos/5621952/pexels-photo-5621952.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Teacher helping students learn on computers in a training lab">
+      <div class="img-overlay"></div>
+    </div>
+    <div class="text-col">
+      <p class="section-eyebrow">Our Approach</p>
+      <h2 class="section-title">Practical Skills. Real-World Outcomes.</h2>
+      <p class="body-text">We do not teach technology for its own sake. Every module in our curriculum is designed around a practical question: <em>How will this skill help you in work or in life?</em> From typing your first document in Microsoft Word to filing digital accounts in QuickBooks — every lesson connects directly to a real-world application.</p>
+      <p class="body-text" style="margin-top:14px;">Our students graduate with the confidence to walk into an office, open a business, or pursue further technical education. Many of our alumni have gone on to careers in accounting, graphic design, digital communications, and web development — right here in Nairobi.</p>
+      <p class="body-text" style="margin-top:14px;">The lab is also available for <strong>private hire</strong> by corporates, training institutions, and NGOs who need a dedicated, fully equipped technology training environment.</p>
+    </div>
+  </div>
+
+  <!-- Curriculum -->
+  <section class="section" id="curriculum-section">
+    <p class="section-eyebrow">Curriculum Directory</p>
+    <h2 class="section-title">What You Will Learn</h2>
+    <p class="body-text" style="margin-bottom:32px;">Our curriculum is structured in three learning tracks, allowing students to progress from foundational literacy through to professional-grade technical competencies:</p>
+    <div class="curriculum-grid">
+      <div class="curriculum-col">
+        <h4>Track 1 · Core Foundations</h4>
+        <ul>
+          <li>Introduction to IT &amp; Computers</li>
+          <li>Operating Systems (2007 &amp; 2010)</li>
+          <li>Word Processor Modules</li>
+          <li>Internet &amp; Email Usage</li>
+        </ul>
+        <p style="font-size:12px;color:var(--slate-light);margin-top:16px;line-height:1.6;">Ideal for beginners and those returning to formal learning. No prior computer experience required.</p>
+      </div>
+      <div class="curriculum-col">
+        <h4>Track 2 · Design &amp; Advanced Layout</h4>
+        <ul>
+          <li>Spreadsheet Management</li>
+          <li>Database Management</li>
+          <li>Graphic Design &amp; Presentation</li>
+          <li>Desktop Publishing</li>
+          <li>Web Design (WordPress CMS)</li>
+        </ul>
+        <p style="font-size:12px;color:var(--slate-light);margin-top:16px;line-height:1.6;">For students with basic computer skills looking to specialise in creative or data-driven roles.</p>
+      </div>
+      <div class="curriculum-col">
+        <h4>Track 3 · Business Solutions</h4>
+        <ul>
+          <li>Computerised Accounting Principles</li>
+          <li>QuickBooks (Desktop &amp; Online)</li>
+          <li>Sage Accounting Software</li>
+          <li>Pastel Accounting Software</li>
+        </ul>
+        <p style="font-size:12px;color:var(--slate-light);margin-top:16px;line-height:1.6;">For finance professionals, business owners, and accounting students seeking software proficiency.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dual CTA -->
+  <section class="section alabaster" id="cta-section">
+    <p class="section-eyebrow">Ready to Get Started?</p>
+    <h2 class="section-title">Join a Course or Hire the Lab</h2>
+    <div class="dual-cta" style="margin-top:32px;">
+      <div class="cta-box">
+        <h4>Student Registration</h4>
+        <p>Ready to join our next intake? Courses run throughout the year in manageable cohorts. Contact our academic office to learn about the next available intake, course fees, and what to bring on your first day.</p>
+        <p>Our team will guide you to the right track based on your current skill level and career goals.</p>
+        <p>
+          <strong>Email:</strong> <a href="mailto:enrolcomp@aoskenya.org">enrolcomp@aoskenya.org</a><br>
+          <strong>Phone:</strong> <a href="tel:+254723577021">+254 723 577 021</a>
+        </p>
+        <button class="btn btn-primary" style="margin-top:16px;">Enquire About Enrolment</button>
+      </div>
+      <div class="cta-box">
+        <h4>Private Lab Hire</h4>
+        <p>Need a state-of-the-art, fully isolated computer training facility for your organisation's own technical training programme? Our lab is available for exclusive hire by corporates, NGOs, government agencies, and training institutions.</p>
+        <p>The facility includes all hardware, internet connectivity, and optional technical support staff. Rates are competitive and flexible — whether you need the lab for a single day or a full month.</p>
+        <button class="btn btn-outline" style="margin-top:16px;" onclick="showPage('meetings')">Inquire About Lab Hire</button>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ════════════════════════════════════════════════════════════════════ -->
+<!-- FOOTER                                                              -->
+<!-- ════════════════════════════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-col">
+    <div class="footer-logo-mark">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <line x1="12" y1="2" x2="12" y2="22" stroke="white" stroke-width="2.5"/>
+        <line x1="2" y1="12" x2="22" y2="12" stroke="white" stroke-width="2.5"/>
+        <circle cx="12" cy="12" r="2.5" fill="white"/>
+      </svg>
+    </div>
+    <h5>AOSK Tumaini Centre</h5>
+    <p>A facility of the Association of Sisterhoods of Kenya, registered under the Perpetual Succession Act. Serving Kenya since 1962 through faith, hospitality, and professional empowerment.</p>
+    <p class="footer-copyright">© 2025 AOSK Tumaini Centre, Nairobi, Kenya. All rights reserved.</p>
+  </div>
+  <div class="footer-col">
+    <h5>Find Us</h5>
+    <address>
+      Elgeyo Marakwet Road<br>
+      Adams Arcade, Kilimani<br>
+      Nairobi, Kenya<br><br>
+      P.O. Box 21068 – 00505<br>
+      Nairobi, Kenya<br><br>
+      <a href="tel:+254723577021">+254 723 577 021</a><br>
+      <a href="mailto:enrolcomp@aoskenya.org">enrolcomp@aoskenya.org</a>
+    </address>
+  </div>
+  <div class="footer-col">
+    <h5>Share Tumaini Centre</h5>
+    <p style="margin-bottom:16px;">Know someone who could benefit from our accommodation, conferencing, or training? Share this page.</p>
+    <div class="social-links">
+      <a class="social-link" href="https://x.com" target="_blank" rel="noopener">
+        <div class="social-icon">𝕏</div>
+        <span>Share via X (Twitter)</span>
+      </a>
+      <a class="social-link" href="https://facebook.com" target="_blank" rel="noopener">
+        <div class="social-icon">f</div>
+        <span>Share via Facebook</span>
+      </a>
+    </div>
+  </div>
+</footer>
+
+</main>
+
+<script>
+const pages = ['home','about','accom','meetings','ict'];
+
+function showPage(name, sectionId) {
+  pages.forEach(p => document.getElementById('page-' + p).classList.remove('active'));
+  document.getElementById('page-' + name).classList.add('active');
+  // close mobile drawer
+  document.getElementById('nav-drawer').classList.remove('open');
+  document.getElementById('menu-btn').setAttribute('aria-expanded','false');
+  if (sectionId) {
+    setTimeout(() => {
+      const el = document.getElementById(sectionId);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 60);
+  } else {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+}
+
+function navTo(page, sectionId) { showPage(page, sectionId); }
+
+// Mobile menu
+function toggleMobileMenu() {
+  const drawer = document.getElementById('nav-drawer');
+  const btn = document.getElementById('menu-btn');
+  const isOpen = drawer.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen);
+}
+
+function toggleMobItem(id) {
+  const item = document.getElementById(id);
+  const isOpen = item.classList.toggle('open');
+  const arrow = item.querySelector('.mob-nav-arrow');
+  if (arrow) arrow.textContent = isOpen ? '▼' : '►';
+}
+
+// Close mobile drawer on outside click
+document.addEventListener('click', e => {
+  const header = document.getElementById('site-header');
+  if (!header.contains(e.target)) {
+    document.getElementById('nav-drawer').classList.remove('open');
+    document.getElementById('menu-btn').setAttribute('aria-expanded','false');
+  }
+});
+</script>
+</body>
+</html>
